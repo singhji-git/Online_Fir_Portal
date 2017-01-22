@@ -1,0 +1,4 @@
+current.html/current.php -> Front page of the website
+history.html -> History page of the website
+motto.html -> Motto page of the website
+achievements.html -> Achievement page of the website

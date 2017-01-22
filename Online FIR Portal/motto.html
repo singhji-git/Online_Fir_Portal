@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JHARKHAND POLICE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img 
+  {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+</head>
+<script>
+	function callMe()
+	{
+		
+		$.ajax({
+			   type: "GET",
+			   url: "http://localhost/cur/mainfile.php",
+			   data: "id=1",
+			   method: "POST",
+			   success: function(response){
+				   console.log("sucesss");
+				  //$("#testDiv").html(response);
+				}
+	   });
+	}
+
+	$(document).ready(function(){
+	setInterval(callMe,60000);
+	});
+</script>
+<?php
+include 'phpfile.php';
+?>
+<body >
+<body style="background:#1a0d00;">
+<h1 style="display:inline; color:white;"><center>ONLINE WEB PORTAL(JHARKHAND POLICE)</center></h1>
+ 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    
+    <ul class="nav navbar-nav">
+	
+      <li class="active" style="align="center;"><a href= "current.html" >Home</a></li>
+	  <li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="current.html#demo">About Us <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="history.html">History</a></li>
+          <li><a href="motto.html">Motto</a></li>
+          <li><a href="achievements.html">Achievement</a></li>
+        </ul>
+      </li>
+	  <li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Services <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal">Missing children</a></li>
+          <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal1">Missing person</a></li>
+          <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal2">Unidentified persons found</a></li>
+		  <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal3">Unidentified deadbodies</a></li>
+          <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal4">Senior citizen registration</a></li>
+          <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal5">Stolen vehicles search</a></li>
+		  <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal6">Missing / Stolen mobile phone search</a></li>
+          <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal7">SMS service</a></li>
+          <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal8">Most wanted</a></li>
+		  <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal9">Info in passport verification</a></li>
+          <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal10">Downloadable forms</a></li>
+		  <li><a class="a a-info a-lg" data-toggle="modal" data-target="#myModal11">Govt. service verification</a></li>
+          
+        </ul>
+      </li>
+	  <li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Choose your location<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="current.html#form1" onclick="my(1)">Garhwa</a></li>
+          <li><a href="current.html#form1" onclick="my(2)">Palamu</a></li>
+          <li><a href="current.html#form1" onclick="my(3)">Latehar</a></li>
+		  <li><a href="current.html#form1" onclick="my(4)">Chatra</a></li>
+          <li><a href="current.html#form1" onclick="my(5)">Hazaribagh</a></li>
+          <li><a href="current.html#form1" onclick="my(6)">Koderma</a></li>
+		  <li><a href="current.html#form1" onclick="my(7)">Giridh</a></li>
+          <li><a href="current.html#form1" onclick="my(2)">Ramgarh</a></li>
+          <li><a href="current.html#form1" onclick="my(9)">Bokaro</a></li>
+		  <li><a href="current.html#form1" onclick="my(10)">Dhanbad</a></li>
+		  <li><a href="current.html#form1" onclick="my(11)">Lohardaga</a></li>
+		  <li><a href="current.html#form1" onclick="my(2)">Gumia</a></li>
+		  <li><a href="current.html#form1" onclick="my(13)">Simdega</a></li>
+		  <li><a href="current.html#form1" onclick="my(2)">Ranchi</a></li>
+		  <li><a href="current.html#form1" onclick="my(14)">Khunti</a></li>
+		  <li><a href="current.html#form1" onclick="my(15)">West Singhbhum</a></li>
+		  <li><a href="current.html#form1" onclick="my(2)">Saraikela Kharasawan</a></li>
+		  <li><a href="current.html#form1" onclick="my(17)">East Singhbhum</a></li>
+		  <li><a href="current.html#form1" onclick="my(1)">Jamatra</a></li>
+		  <li><a href="current.html#form1" onclick="my(18)">Deoghar</a></li>
+		  <li><a href="current.html#form1" onclick="my(1)">Jamatara</a></li>
+		  <li><a href="current.html#form1" onclick="my(19)">Dumka</a></li>
+		  <li><a href="current.html#form1" onclick="my(20)">Pakur</a></li>
+		  <li><a href="current.html#form1" onclick="my(21)">Godda</a></li>
+		  <li><a href="current.html#form1"  onclick="my(22)">Sahibganj</a></li>
+        </ul>
+      </li>
+	  <li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+	  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+	  <img src="user-man-circle-invert-512.png" height="25" width="25" /> <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#" data-toggle="modal" data-target="#myM">Log in</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myM1">Sign up</a></li>
+         
+        </ul>
+		
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+		<li> &nbsp </li>
+		 <li  style="align:right;"><img alt="" class="img-zoom" align="right"; onmouseout="this.width='200';this.height='95'" onmouseover="this.width='250';this.height='161'" src="logo Jharkhand-Police.png" style="width: 84px; height: 54px;float:right;" /> </li>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--------------------login modals----------------------->
+
+
+
+<div class="modal fade" id="myM" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">LOG In</h4>
+        </div>
+        <div class="modal-body">
+		<form role="form" action="phpfile.php" method="post">
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="text" class="form-control" id="email" name="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" name="pwd">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <input type="submit" class="btn btn-default" name="submit4">
+</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!----log in end--->
+  <!---sign up start--->
+  
+  <div class="modal fade" id="myM1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">SIGN UP</h4>
+        </div>
+        <div class="modal-body">
+		<form role="form" action="phpfile.php" method="post">
+  <div class="form-group">
+    <label for="namex">Name:</label>
+    <input type="text" class="form-control" name="namex">
+  </div>
+  <div class="form-group">
+    <label for="placex">Place:</label>
+    <input type="text" class="form-control" name="placex">
+  </div>
+  <div class="form-group">
+    <label for="desx">Designation:</label>
+    <input type="text" class="form-control" name="desx">
+  </div>
+  <div class="form-group">
+    <label for="userx">UserName:</label>
+    <input type="text" class="form-control" name="userx">
+  </div>
+  <div class="form-group">
+    <label for="pwdx">Password:</label>
+    <input type="password" class="form-control" name="pwdx">
+  </div>
+  <input type="submit" class="btn btn-default" name="submit3">
+</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!------sign up ends---->
+  
+  
+  <!----------------login modals-------------------->
+  
+
+  
+<!---------------------modals----------------->
+
+
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Missing Children cases solved:</h4>
+        </div>
+        <div class="modal-body">
+		<b> Operation Muskaan:</b>
+          <p>The name of the mission, Operation Muskaan, sums up the cause taken up by Jharkhand Police, which is the only force in the country to run
+		  a state-wide coordinated operation, with its nodal authority being the state's Criminal Investigation Department (CID).</p>
+		  <p> The operation has till now been carried out in two stages and at least 700 children have been rescued by the Jharkhand Police till July 29, 2015.
+		  </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Missing Person Cases solved:</h4>
+        </div>
+        <div class="modal-body">
+          <p>The team of police officials from the Ranchi police has managed to reunited a 13 year-old minor girl with her family members after
+		  10 day long hard work of finding her family members who stayed in a Naxalite infested area in Jharkhand on 21st July,2015.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+    <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Unidentified Persons Found:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Unidentified Deadbodies found:</h4>
+        </div>
+        <div class="modal-body">
+          <p><ul>
+		  <li>A deadbody of age 30 was found from Jamshedpur .</l1>
+		  <li>A deadbody of age 50 was found from Jamshedpur .</l1>
+		  <li>A deadbody of age 32 was found from Jamshedpur .</l1>
+		  <li>A deadbody of age 73 was found from Jamshedpur .</l1></ul>
+		  </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Senior Citizens Registration:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Senior Citizens can be registered in the Jharkhand Police website.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Stolen Vehicles Search:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <div class="modal fade" id="myModal6" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Missing Mobile Phone Search:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <div class="modal fade" id="myModal7" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">SMS Service:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+    <div class="modal fade" id="myModal8" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Most Wanted:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Most Wanted List will be uploaded soon in the website.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+      <div class="modal fade" id="myModal9" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Info in passport verification:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+      <div class="modal fade" id="myModal10" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Downloadable Forms:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+      <div class="modal fade" id="myModal11" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Govt. Service Verification:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+<div class="jumbo" style="background:lightblue">
+<br><br>
+
+<h2>  <center> OUR MOTTO </center></h2>
+
+ <p style="font-family:verdana; text-align:justify; border-width:1px; border-color:lightblue; border-style:solid; padding-left:250px; padding-right:250px;"> 
+ 
+ The Jharkhand Police (also known as Brihanmumbai Police) is the police force of the state of Jharkhand. It is a part of Maharashtra Police and has the primary responsibilities of 
+ law enforcement and investigation within the limits of the whole state. The department's motto is "Sadrakṣaṇāya Khalanigrahaṇāya" (Sanskrit: सद्रक्षणाय खलनिग्रहणाय, "To protect the good 
+ and to destroy
+ the evil").[1]
+ <br>
+It is headed by the Commissioner of Ranchi Police assisted by Additional director general of Ranchi police and each Districts headed by superintendent of Ranchii police ( excluding jails
+ headed by IG's ) and each stations headed by a senior inspector or " station officer ".
+ 
+ <br>
+ We, the members of Jharkhand Police, shall uphold the Law and the Rights of all people for a safe and secure environment,conducive to their internal 
+ and external growth and development. Towards this end, we set for ourselves the following objectives:
+ <br>
+ Protect the lives and liberties of the people from criminal and anti-social elements and bring about improvement in the quality of life in the society.
+Earn the goodwill, support and active assistance of the community.
+Co-ordinate with other departments of criminal Justice System.
+Equal treatment regardless of caste, religion, social and economic status or political affiliations.
+Due consideration for women, children, senior citizen and weaker sections.
+Improve professional knowledge, skills and attitudes and adopt modern methods in
+police work.
+Promote human rights and professional values of integrity, honesty and efficiency.
+<br>
+Basic duties of the Police are maintenance of Law and Order, prevention. and detection of crime, traffic management, enforcement of various laws 
+of the land.
+ 
+ </p>
+ </div>
+ 
+ <!--up arrow-->
+<div style="background:#000000;">
+<footer class="text-center">
+
+<div class="row">
+<div class="col-md-4">
+<td><h2>USEFUL LINKS</h2></td><br>
+<td><a href="http://lawmin.nic.in/">Ministry of Laws and Justice</a></td><br>
+<td><a href="http://jharkhandhighcourt.nic.in/">Jharkhand High Court</a></td><br>
+<td><a href="http://pcserver.nic.in/iapmis/login.aspx">Iap planning commission</a></td><br>
+<td><a data-toggle="modal" data-target="#myModalyy ">other police websites</a></td><br>
+</div>
+
+
+<div class="col-md-4">
+<td><h2>About Us</h2></td><br>
+<td></td><a href="current.html#demo">About us</a><br>
+<td><a href="#" >Contact Us</a></td><br>
+<td><a href="#" data-toggle="modal" data-target="#myModa">Feedback</a></td><br>
+<td><a href="#" data-toggle="modal" data-target="#myModa">sitemap</a></td><br>
+</div>
+<div class="col-md-4">
+<td><h2>POLICIES</h2></td><br>
+<td><a href="#" data-toggle="modal" data-target="#myModa">Website Policies</a></td><br>
+<td><a href="#" data-toggle="modal" data-target="#myModa">Hyperlinking Policies</a></td><br>
+<td><a href="#" data-toggle="modal" data-target="#myModa">Privacy Policies</a></td><br>
+<td><a href="#" data-toggle="modal" data-target="#myModa">copyright Policies</a></td><br>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div id="myModa" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModaly" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Other Police Websites</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+		  
+		  <div class="col-md-4"><a href="#">Bihar police</a></div><div class="col-md-4"><a href="#">Mumbai police</a></div>
+		  <div class="col-md-4"><a href="#">DELHI police</a></div><div class="col-md-4"><a href="#">ANDRHA PRADESH police</a></div>
+		  <div class="col-md-4"><a href="#">GUJARAT police</a></div><div class="col-md-4"><a href="#">KERALA police</a></div>
+		  </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+
+
+  <a class="up-arrow" href="#" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br>
+  <p style="color:white;">WE ARE HERE TO HELP YOU <img src="logo Jharkhand-Police.png" width=20px; height=20px;>
+</footer>
+</div>
+<!--up arrow-->
+
+</body>
+</html>
